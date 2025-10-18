@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 StudySpark✨</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="dashboard" class="container">
+    <div class="dashboard-header">
+      <h1>📚 StudySpark✨</h1>
+      <div>
+        <button id="modeToggle" title="Toggle Theme">🌙</button>
+        <button id="logoutBtn" title="Logout">⎋ Logout</button>
+      </div>
+    </div>
+
+    <div id="progressContainer">
+      <p>Progress: <span id="progressText">0%</span></p>
+      <div id="progressBar"><div id="progressFill"></div></div>
+      <p id="miniStats">Tasks Done: <span id="doneCount">0</span> | Pending: <span id="pendingCount">0</span></p>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div class="dashboard-footer">
+      <button id="addTaskBtn">➕ Add Task</button>
+      <button id="openCalendar">📅 Open Calendar</button>
+    </div>
+  </div>
+
+  <!-- Task Modal -->
+  <div id="taskModal" class="modal">
+    <div id="taskModalContent" class="modal-content">
+      <h2>➕ Add / Edit Task</h2>
+      <input type="text" id="taskName" placeholder="Task Name">
+      <input type="text" id="taskSubject" placeholder="Subject">
+      <input type="date" id="taskDate">
+      <input type="time" id="taskTime">
+      <select id="taskPriority">
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <div class="modal-actions">
+        <button id="saveTaskBtn">Save</button>
+        <button id="closeTaskBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup & Confetti -->
+  <div id="popupMessage">
+    <div id="popupContent"></div>
+    <canvas id="confettiCanvas"></canvas>
+    
+  </div>
+</body>
+</html>

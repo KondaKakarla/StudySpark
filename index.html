@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome - StudySpark✨</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="welcomeScreen">
+  <h1>StudySpark✨</h1>
+  <div class="tagline">Plan smarter. Study better. Track everything easily.</div>
+  <button id="getStartedBtn" onclick="location.href='dashboard.html'">Get Started</button>
+</div>
+<script>
+    document.getElementById('getStartedBtn').addEventListener('click', () => {
+      window.location.href = "auth.html"; // go to login/signup page
+    });
+  </script>
+
+</body>
+</html>
